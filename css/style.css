@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.cuerpo { 
+    background-image: url(../img/tecnología-informática.jpg);
+    width: 100%;
+    height: 100%;
+    background-image: no-repeat;
+    padding: 500px;
+
+}
+main {
+    padding: 20px;
+}
+h1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    background-color: rgb(136, 134, 134);
+}
+footer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content:space-evenly;
+    padding: 25px;
+    background-color: rgb(136, 134, 134);
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+.header {
+    background-color: rgb(72, 73, 73);
+    box-shadow: 1px 1px 5px 0px color(rgb(221, 224, 221));
+    position: sticky;
+    top: 0;
+    width: 100%; 
+}
+.imagen {
+    width: 60px;
+    border-radius: 50px;
+    padding: 20px 0px 0px 0px;
+}
+.logo {
+    display: inline-block;
+    color: white;
+    font-size: 60px;
+    margin-left: 10px;
+}
+.nav {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgb(73, 73, 73);
+    overflow: hidden;
+    max-height: 0;
+    border-radius: 45px;
+    transition: max-height .5s ease-out;
+}
+.menu a {
+    display: block;
+    padding: 45px 30px 30px 30px;
+    color: rgb(255, 255, 255);
+}
+.menu a:hover {
+    background: transparent;
+    color: rgb(10, 255, 10);
+
+}
+.hamb {
+    cursor: pointer;
+    float: right;
+    padding: 40px 20px;
+}
+.hamb-line {
+    background-color: white;
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+}
+.hamb-line::before,
+.hamb-line::after {
+    background-color: white;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.hamb-line::before {
+    top: 5px;
+}
+.hamb-line::after {
+    top: -5px;
+}
+.side-menu {
+    display: none;
+}
+.side-menu:checked ~ nav {
+    max-height: 100%;
+}
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top: 0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top: 0;
+}
+@media (min-width: 768px) {
+    .nav {
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+        background-color: transparent;
+    }
+    .menu li {
+        float: left;
+    }
+    .menu a:hover {
+        background: transparent;
+        color: rgb(10, 194, 10) light;
+    }
+    .hamb {
+        display: none;
+    }
+}

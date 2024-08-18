@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+header nav ul li {
+    list-style: none;
+}
+header nav ul li a {
+    text-decoration: none;
+    color: rgb(5, 7, 145);
+}
+.img {
+    background-image: url(../img/redes.png);
+    width: 100%;
+    height: 100%;
+    background-image: no-repeat;
+    padding: 250px 0px 250px 0px;
+    background-position: center;
+}
+h1 {
+    display: flex;
+    justify-content: center;   
+}
+section {
+   
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px 0px 47px;
+    color: rgb(201, 57, 57);
+    width: 100%;
+}
+section:hover {
+    background: grey;
+}
+footer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content:space-evenly;
+    padding: 25px;
+    background-color: rgb(136, 134, 134);
+}
+@media only screen and (min-width: 320px) {
+    body { 
+        font-size: 14px;
+    }
+    }
+    @media screen and (max-width: 1440px) {
+        body { 
+            font-size: 18px;
+        }
+        
+    }
+    
